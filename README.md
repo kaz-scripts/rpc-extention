@@ -1,0 +1,1 @@
+extention for discord rpc 
