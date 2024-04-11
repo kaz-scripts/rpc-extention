@@ -1,3 +1,4 @@
 Flask==3.0.2
 Flask_Cors==4.0.0
 pypresence==4.3.0
+werkzeug>=2.3.8 # not directly required, pinned by Snyk to avoid a vulnerability
