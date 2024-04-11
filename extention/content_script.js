@@ -38,7 +38,7 @@ function sendRPCUpdate(details, state, limage, startTime, buttons, ltext, simage
     .catch(error => console.log('Error:', error));
 }
 
-function sendRPCclear {
+function sendRPCclear() {
     fetch('http://localhost:5000/clear_rpc', {
         method: 'POST',
         headers: {
@@ -82,7 +82,7 @@ function updateRPC() {
             if (element) {
                 clearInterval(intervalId);
             }
-        }, 5000);
+        }, 10000);
         details = "YouTubeを視聴中 | " + document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > div.ytp-time-display.notranslate > span:nth-child(2) > span.ytp-time-current").textContent + " / " + document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > div.ytp-time-display.notranslate > span:nth-child(2) > span.ytp-time-duration").textContent;
         state = document.querySelector("#title > h1 > yt-formatted-string").textContent + " | " + document.querySelector("#text > a").textContent;
         limage = "https://www.youtube.com/s/desktop/accca349/img/favicon_144x144.png";
