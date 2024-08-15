@@ -40,10 +40,3 @@ function sendMessageToContentScript(message) {
         chrome.tabs.sendMessage(tabs[0].id, message);
     });
 }
-
-/*
-4:rpcのクリアのリクエスト用の関数
-16:4の条件分岐。いらぬサイトではクリアする。
-30,34:content scriptではタブのイベントを監視できないためbackgroundで監視。
-38:発火したらcontent scriptにメッセージを送信。
-*/
