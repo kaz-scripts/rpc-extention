@@ -63,13 +63,7 @@ function updateRPC() {
     //startTime = (Math.floor(Date.now() / 1000)).toString();
     var buttons = '[]';
 
-    if (host === "hianime.to") {
-        details = document.querySelector("#ani_detail > div > div > div.anis-watch-wrap > div.anis-watch-detail > div > div.anisc-detail > h2 > a").textContent + "を視聴中";
-        state = removeDuplicateParams(url);
-        limage = document.querySelector("#ani_detail > div > div > div.anis-watch-wrap > div.anis-watch-detail > div > div.anisc-poster > div > img").src;
-        ltext = document.querySelector("#ani_detail > div > div > div.anis-watch-wrap > div.anis-watch-detail > div > div.anisc-detail > h2 > a").textContent;
-        buttons = `[{"label": "視聴する", "url": "${removeDuplicateParams(window.location.href)}"}]`;
-    } else if (host === "diep.io") {
+    if (host === "diep.io") {
         details = "diep.ioをプレイ中";
         state = localStorage.getItem("cscore") + " | " + localStorage.getItem("ctank");
         //alert(url);
